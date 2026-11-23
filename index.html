@@ -220,28 +220,7 @@
       }
     }
 
-    .whatsapp-float {
-      position: fixed;
-      right: 22px;
-      bottom: 78px;
-      z-index: 900;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      padding: 16px 24px;
-      border-radius: 999px;
-      background-color: var(--whatsapp-green);
-      color: #ffffff !important;
-      font-size: 1.05rem;
-      font-weight: 800;
-      text-decoration: none !important;
-      border: 2px solid #ffffff;
-      box-shadow: 0 10px 26px rgba(11, 107, 96, 0.36);
-      animation: whatsapp-hop 5s ease-in-out infinite;
-      transition: background-color 0.15s ease, box-shadow 0.15s ease;
-    }
-
-.whatsapp-float {
+   .whatsapp-float {
   position: fixed;
   left: 18px;
   bottom: 22px;
@@ -260,20 +239,17 @@
   box-shadow: 0 10px 24px rgba(11, 107, 96, 0.35);
   transform: translate3d(var(--mx, 0px), var(--my, 0px), 0);
   transition: transform 0.22s ease-out, background-color 0.15s ease, box-shadow 0.15s ease;
-}
-
+    }
 .whatsapp-float:hover,
 .whatsapp-float:focus-visible {
   background-color: var(--whatsapp-hover);
   box-shadow: 0 14px 30px rgba(11, 107, 96, 0.45);
 }
 
-/* Si le bouton contenait du texte à côté de l'icône, on le cache pour garder un vrai rond propre */
 .whatsapp-float .whatsapp-label,
 .whatsapp-float span:not(.sr-only) {
   display: none;
 }
-
 @media (max-width: 600px) {
   .whatsapp-float {
     left: 14px;
