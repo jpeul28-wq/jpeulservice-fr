@@ -241,25 +241,47 @@
       transition: background-color 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .whatsapp-float:hover,
-    .whatsapp-float:focus-visible {
-      animation: none;
-      background-color: var(--whatsapp-hover);
-      transform: translateY(-3px);
-      box-shadow: 0 14px 30px rgba(11, 107, 96, 0.44);
-    }
+.whatsapp-float {
+  position: fixed;
+  left: 18px;
+  bottom: 22px;
+  width: 58px;
+  height: 58px;
+  padding: 0;
+  border-radius: 50%;
+  z-index: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--whatsapp-green);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border: 2px solid #ffffff;
+  box-shadow: 0 10px 24px rgba(11, 107, 96, 0.35);
+  transform: translate3d(var(--mx, 0px), var(--my, 0px), 0);
+  transition: transform 0.22s ease-out, background-color 0.15s ease, box-shadow 0.15s ease;
+}
 
-    .whatsapp-float-icon {
-      font-size: 1.35rem;
-      line-height: 1;
-    }
+.whatsapp-float:hover,
+.whatsapp-float:focus-visible {
+  background-color: var(--whatsapp-hover);
+  box-shadow: 0 14px 30px rgba(11, 107, 96, 0.45);
+}
 
-    @media (prefers-reduced-motion: reduce) {
-      .whatsapp-float {
-        animation: none;
-      }
-    }
+/* Si le bouton contenait du texte à côté de l'icône, on le cache pour garder un vrai rond propre */
+.whatsapp-float .whatsapp-label,
+.whatsapp-float span:not(.sr-only) {
+  display: none;
+}
 
+@media (max-width: 600px) {
+  .whatsapp-float {
+    left: 14px;
+    bottom: 18px;
+    width: 54px;
+    height: 54px;
+  }
+}
     /* ==========================================================================
        SECTION HÉRO
        ========================================================================== */
